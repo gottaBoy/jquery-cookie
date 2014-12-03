@@ -2,7 +2,7 @@
 
 jQuery Cookie操作
 
-##原生JavaScript操作Cookie
+##需求背景
 
 在原生的JavaScript语句中，我们可以通过下面的两个属性获取Cookie的相关内容：
 
@@ -21,9 +21,40 @@ jQuery Cookie操作
 
 //写入cookie
 document.cookie = "name=Jerry Sun";
-document.cookie = "sex=mail";
+document.cookie = "sex=male";
 
 //取得cookie字符串
-var str = document.cookie; //=> 'name=Jerry Sun; sex=mail'
+var str = document.cookie; //=> "name=Jerry Sun; sex=male"
+
+```
+
+原生操作并不能满足快速创建、编辑、移除某个cookie的需求，因此我们围绕这三点对Cookie操作进行了补充完善，从而构成了现在你所看到的jQuery Cookie插件。希望它能够帮助你快速编辑Cookie。
+
+##使用jQuery Cookie插件
+
+###获取Cookie
+
+```js
+
+$.cookie("name"); //=> "Jerry Sun"
+$.cookie("sex");  //=> "male"
+
+```
+
+###创建/编辑Cookie
+
+```js
+
+$.cookie("name", "Jerry Sun");
+$.cookie("sex", "male");
+
+```
+
+###移除Cookie
+
+```js
+
+$.cookie("name", null);
+$.cookie("sex", null);
 
 ```
