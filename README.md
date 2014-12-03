@@ -14,3 +14,16 @@ jQuery Cookie操作
 <br>该属性是浏览器提供给开发人员管理当前域下的所有cookie的唯一途径（该属性可读写）。
 <br>对该属性进行读操作，可以获取已有的所有cookie所组成的字符串内容。
 <br>对该属性进行写操作，则可以添加cookie或者对cookie进行重新赋值。
+
+代码实例：
+
+```js
+
+//写入cookie
+document.cookie = "name=Jerry Sun";
+document.cookie = "sex=mail";
+
+//取得cookie字符串
+var str = document.cookie; //=> 'name=Jerry Sun; sex=mail'
+
+```
