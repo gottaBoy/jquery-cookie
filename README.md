@@ -7,10 +7,12 @@
 在原生的JavaScript语句中，我们可以通过下面的两个属性获取cookie的相关内容：
 
 1. `navigator.cookieEnabled`
+<br>
 <br>该属性返回当前浏览器是否支持cookie操作。（返回类型：Boolean）
 <br>目前而言几乎绝大多数浏览器都支持cookie，只有那些有特殊需求的用户才会去禁用浏览器的cookie。如果相关应用需要使用到cookie功能，请务必确保浏览器是否支持cookie操作，否则应不给于处理。
 
 2. `document.cookie`
+<br>
 <br>该属性是浏览器提供给开发人员管理当前域下的所有cookie的唯一途径（该属性可读写）。
 <br>对该属性进行读操作，可以获取已有的所有cookie所组成的字符串内容。
 <br>对该属性进行写操作，则可以添加cookie或者对cookie进行重新赋值。
@@ -34,7 +36,7 @@ var str = document.cookie; //=> "name=Jerry Sun; sex=male"
 
 ### 创建/编辑cookie
 
-默认针对当前域名下的根目录有效，同时它的有效期在会话结束时失效。
+默认针对当前域名下的根目录有效，同时它的有效期在会话结束后失效。
 
 ```js
 
@@ -68,7 +70,7 @@ $.cookie("sex", null);
 
 ### `options.expires`
 
-该选项用来设置cookie的过期时间(单位：天)，默认为会话结束时失效。
+该选项用来设置cookie的过期时间(单位：天)，默认为会话结束后失效。
 
 ```js
 
@@ -134,7 +136,7 @@ $.cookie("country", "China", {secure: true});
 
 该cookie插件的目的主要在于简化创建、编辑、移除某个cookie的操作，在能够满足日常操作需求的同时亦能保持代码的简洁性，因此并没有扩展其他特性需求，比如：将所有cookie以数组形式返回、清除所有cookie内容、多个cookie通过JSON格式赋值等等。
 
-如果你需要使用这些特性，可以尝试下面的三个脚本：
+如果你需要使用这些特性，可以尝试下面的内容：
 
 1. [carhartl/jquery-cookie](https://github.com/carhartl/jquery-cookie)
 2. [js-coder/cookie.js](https://github.com/js-coder/cookie.js)
