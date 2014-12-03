@@ -8,11 +8,11 @@
  * Cookie操作
  * @param  {String}     name                cookie的名称（区分大小写）
  * @param  {String}     [value]             cookie的值
- * @param  {Object}     [options]            配置选项（仅在设置Cookie时有效）
- * @param  {Number}     [options.expires]    指定当前cookie的有效时间（单位：天），默认值为：""，表示会话结束后失效（等同于设置为0）。
- * @param  {String}     [options.path]       指定可访问cookie的目录名称，默认值为：“/”，表示根目录。
- * @param  {String}     [options.domain]     指定可访问cookie的主机名，默认值为：""，表示当前访问域名。
- * @param  {Boolean}    [options.secure]     是否启用安全性，默认值为：false。
+ * @param  {Object}     [options]           配置选项（仅在设置Cookie时有效）
+ * @param  {Number}     [options.expires]   指定当前cookie的有效时间（单位：天），默认值为：""，表示会话结束后失效（等同于设置为0）。
+ * @param  {String}     [options.path]      指定可访问cookie的目录名称，默认值为：“/”，表示网站根目录。
+ * @param  {String}     [options.domain]    指定可访问cookie的主机名，默认值为：""，表示当前访问域名。
+ * @param  {Boolean}    [options.secure]    是否启用安全性，默认值为：false。
  * @return {String|null|undefined}          不提供value参数时将返回指定cookie的值（如果该cookie未设置则返回null）；提供value参数时表示设置指定cookie的值（如果设置为null则表示删除某个cookie） ，此时返回undefined。
  */
 jQuery.cookie = function(name, value, options){
