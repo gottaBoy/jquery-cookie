@@ -1,5 +1,5 @@
 /**
- * @file        基于jQuery的cookie操作
+ * @file        集成于jQuery中的Cookie操作
  * @version     1.0.0
  * @author      龙泉 <yangtuan2009@126.com>
  */
